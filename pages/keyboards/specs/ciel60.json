@@ -1,0 +1,51 @@
+{
+    "display": "Ciel60",
+    "case": {
+        "display": "Ciel60",
+        "dampening": "EVA foam",
+        "material": "CNC and Anodized 6061 Aluminium"
+    },
+    "pcb": {
+        "display": "Ciel60 hotswap",
+        "dampening": "Poron foam",
+        "mounting_style": "30A O-Ring",
+        "flex_cuts": false,
+        "thickness": 1.6
+    },
+    "plate": {
+        "material": "FR4",
+        "dampening": "Poron foam"
+    },
+    "switches": {
+        "display": "Wuque Studio Aurora Pink",
+        "type": "Linear",
+        "top_housing": "Polycarbonate",
+        "bottom_housing": "Nylon",
+        "stem": "POM",
+        "nr_of_pins": 5,
+        "total_travel": 3.8,
+        "actuation_travel": 1.9,
+        "actuation_force": 53,
+        "bottom_out_force": 63.5,
+        "lube": "Krytox 205g0"
+    },
+    "keycaps": {
+        "display": "NicePBT Noel",
+        "profile": "Cherry",
+        "material": "PBT",
+        "legend_method": "(Reverse) Dyesub"
+    },
+    "stabs": {
+        "display": "C3 Equalz Screw-in Stabilizers",
+        "mounting_type": "Screw-in",
+        "stem": "Nylon",
+        "housing": "Nylon",
+        "lube": "Krytox 205g0 & Super Lube Synthetic Grease"
+    },
+    "supported_layouts": [
+        "Split backspace",
+        "Split right shift",
+        "7u Spacebar",
+        "Step caps lock"
+    ]
+}

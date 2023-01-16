@@ -1,0 +1,54 @@
+{
+    "display": "Ikki68",
+    "case": {
+        "display": "Ikki68 Aurora x Winter Breath case",
+        "dampening": "Silicone",
+        "material": "Injection molded Polycarbonate"
+    },
+    "pcb": {
+        "display": "Ikki68 hotswap",
+        "dampening": false,
+        "mounting_style": "(Poron foam) Gasket",
+        "flex_cuts": true,
+        "thickness": 1.2
+    },
+    "plate": {
+        "material": "Polycarbonate",
+        "dampening": "Silicone"
+    },
+    "switches": {
+        "display": "NovelKeys Cream",
+        "type": "Linear",
+        "top_housing": "POM",
+        "bottom_housing": "POM",
+        "stem": "POM",
+        "nr_of_pins": 5,
+        "total_travel": 4,
+        "actuation_travel": 2,
+        "actuation_force": 55,
+        "bottom_out_force": 70,
+        "lube": "Krytox 205g0"
+    },
+    "keycaps": {
+        "display": "Akko Silent",
+        "profile": "Cherry",
+        "material": "PBT",
+        "legend_method": "Double shot"
+    },
+    "stabs": {
+        "display": "Wuque Studio Stabilisers Aurora Series",
+        "mounting_type": "Screw-in",
+        "stem": "Nylon",
+        "housing": "Nylon",
+        "lube": "Krytox 205g0 & Super Lube Synthetic Grease"
+    },
+    "supported_layouts": [
+        "Split backspace",
+        "Split left shift",
+        "Split right shift",
+        "3-Split spacebar",
+        "7u Spacebar",
+        "ISO Enter",
+        "Step caps lock"
+    ]
+}

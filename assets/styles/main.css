@@ -1,0 +1,308 @@
+@import "@catppuccin/palette/css/catppuccin.css";
+@import "@fontsource/roboto"; /* Weights: [100,300,400,500,700,900] */
+
+/* https://github.com/catppuccin/catppuccin/blob/main/docs/style-guide.md */
+.theme-dark {
+  /* Background colors */
+  --bgColor: var(--ctp-mocha-base-hsl);
+  --bgSecondary: var(--ctp-mocha-crust-hsl);
+  --bgTertiary: var(--ctp-mocha-mantle-hsl);
+  --surface1: var(--ctp-mocha-surface0-hsl);
+  --surface2: var(--ctp-mocha-surface1-hsl);
+  --surface3: var(--ctp-mocha-surface2-hsl);
+  --overlay1: var(--ctp-mocha-overlay0-hsl);
+  --overlay2: var(--ctp-mocha-overlay1-hsl);
+  --overlay3: var(--ctp-mocha-overlay2-hsl);
+  /* Typography */
+  --textColor: var(--ctp-mocha-text-hsl);
+  --subtext1: var(--ctp-mocha-subtext0-hsl);
+  --subtext2: var(--ctp-mocha-subtext1-hsl);
+  --textSubtle: var(--overlay2);
+  --textHighlight: var(--ctp-mocha-rosewater-hsl);
+  --textSuccess: var(--ctp-mocha-green-hsl);
+  --textWarning: var(--ctp-mocha-peach-hsl);
+  --textError: var(--ctp-mocha-maroon-hsl);
+  --textTag: var(--ctp-mocha-blue-hsl);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bgColor);
+  color: var(--textColor);
+  font-family: "Roboto", "sans-serif";
+  transition: .2s;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.subtext {
+  color: var(--subtext1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  display: inline-block;
+  color: var(--subtext2);
+}
+
+a:link, a:visited {
+  color: var(--textHighlight);
+  text-decoration: underline;
+  text-decoration-color: var(--textHighlight);
+  transition: .2s;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  filter: brightness(130%);
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Small screen sizes */
+@media only screen and (max-width: 576px) {
+  .card-half {
+    flex-basis: 100% !important;
+  }
+}
+
+/* Medium screen sizes */
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .card-half {
+    flex-basis: 100% !important;
+  }
+}
+
+/* Large screen sizes */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* XLarge screen sizes */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* XXLarge screen sizes */
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* XXXLarge screen sizes */
+@media only screen and (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+header {
+  padding-top: 1.25rem;
+  justify-content: space-between;
+  align-items: center;
+  height: max-content;
+}
+
+footer {
+  background-color: var(--bgSecondary);
+}
+
+footer h6 {
+  margin-top: 1rem;
+}
+
+footer .footer-content-block:last-of-type {
+  padding: 1rem 0;
+}
+
+footer h6 {
+  margin-bottom: 0;
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+footer ul a img {
+  height: 30pt;
+  width: 30pt;
+  padding: 5pt;
+  border-radius: .75rem;
+  transition: .2s;
+}
+
+footer ul a img:hover {
+  background-color: var(--bgTertiary);
+}
+
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+footer p {
+  margin: 0 auto;
+}
+
+.footer-parent {
+  display: flex;
+  margin: 0 auto;
+}
+
+.footer-parent div {
+  flex: 1 1 50%;
+}
+
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, .6);
+  z-index: 1000;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.modal {
+  position: relative !important;
+  background-color: var(--bgColor);
+  padding: 12pt 20pt;
+  border-radius: .75rem;
+  z-index: 1001;
+  min-width: 350px;
+  flex: 0 1 auto;
+  align-self: center;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+}
+
+.modal-title {
+  color: var(--textHighlight) !important;
+}
+
+.modal-close {
+  position: absolute;
+  right: 20pt;
+}
+
+.modal-close svg {
+  height: 20pt;
+}
+
+.modal-header {
+  margin-bottom: 20px;
+}
+
+.modal-enter-active, .modal-leave-active {
+  transition: opacity .08s ease-in-out;
+}
+
+.modal-enter-from, .modal-leave-to {
+  opacity: 0;
+}
+
+.modal-enter-active, .modal-leave-active {
+  transition: opacity .08s ease-in-out;
+}
+
+.modal-enter-from, .modal-leave-to {
+  opacity: 0;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: .75rem;
+}
+
+.card {
+  background-color: var(--bgTertiary);
+  border-radius: .75rem;
+  padding: 1rem .8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: .75rem;
+  transition: .2s;
+}
+
+.card:hover {
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.08);
+}
+
+.card h3, .card p, .card div {
+  margin: 0;
+}
+
+.card a {
+  width: fit-content;
+  align-self: end;
+}
+
+.card button {
+  align-self: end;
+}
+
+.card-half {
+  flex-basis: 50%;
+}
+
+button {
+  background-color: var(--surface1);
+  padding: .5rem .75rem;
+  border: none;
+  border-radius: .25rem;
+  color: var(--subtext1);
+  cursor: pointer;
+  transition: .2s;
+}
+
+button:hover {
+  background-color: var(--surface2);
+}
+
+button:disabled {
+  background-color: var(--textSubtle);
+}
+
+button:disabled:hover {
+  background-color: var(--textSubtle);
+  cursor: not-allowed;
+}
