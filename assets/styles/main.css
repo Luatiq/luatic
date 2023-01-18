@@ -127,6 +127,7 @@ header {
 
 footer {
   background-color: var(--bgSecondary);
+  margin-top: 1rem;
 }
 
 footer h6 {
