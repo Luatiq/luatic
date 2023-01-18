@@ -11,7 +11,7 @@
             title="Close"
             class="modal-close"
             @click="$emit('toggleModal')"
-          >X</a>
+          ><x-icon /></a>
         </div>
 
         <div class="modal-content">
@@ -29,6 +29,8 @@
 </template>
 
 <script>
+import { XIcon } from 'vue-tabler-icons'
+
 const props = {
   title: String,
   button: false,
@@ -37,6 +39,9 @@ const props = {
 
 export default {
   name: 'ModalComponent',
+  components: {
+    XIcon
+  },
   props
 }
 </script>

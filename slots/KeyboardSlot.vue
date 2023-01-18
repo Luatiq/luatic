@@ -27,7 +27,7 @@
             <td>Case</td>
             <td>{{ keeb.case.display }}</td>
             <td :class="detailsVisible.case ? 'caseChevronOpen' : ''">
-              <ChevronRightIcon />
+              <chevron-right-icon />
             </td>
           </tr>
         </tbody>
@@ -48,7 +48,7 @@
             <td>PCB</td>
             <td>{{ keeb.pcb.display }}</td>
             <td :class="detailsVisible.pcb ? 'pcbChevronOpen' : ''">
-              <ChevronRightIcon />
+              <chevron-right-icon />
             </td>
           </tr>
         </tbody>
@@ -77,7 +77,7 @@
             <td>Plate</td>
             <td>{{ keeb.plate.material }}</td>
             <td :class="detailsVisible.plate ? 'plateChevronOpen' : ''">
-              <ChevronRightIcon />
+              <chevron-right-icon />
             </td>
           </tr>
         </tbody>
@@ -94,7 +94,7 @@
             <td>Switches</td>
             <td>{{ keeb.switches.display }}</td>
             <td :class="detailsVisible.switches ? 'switchesChevronOpen' : ''">
-              <ChevronRightIcon />
+              <chevron-right-icon />
             </td>
           </tr>
         </tbody>
@@ -147,7 +147,7 @@
             <td>Keycaps</td>
             <td>{{ keeb.keycaps.display }}</td>
             <td :class="detailsVisible.keycaps ? 'keycapsChevronOpen' : ''">
-              <ChevronRightIcon />
+              <chevron-right-icon />
             </td>
           </tr>
         </tbody>
@@ -172,7 +172,7 @@
             <td>Stabilizers</td>
             <td>{{ keeb.stabs.display }}</td>
             <td :class="detailsVisible.stabs ? 'stabsChevronOpen' : ''">
-              <ChevronRightIcon />
+              <chevron-right-icon />
             </td>
           </tr>
         </tbody>
@@ -201,7 +201,7 @@
             <td>Supported layouts</td>
             <td>{{ keeb.supported_layouts.length }}</td>
             <td :class="detailsVisible.suppLayouts ? 'suppLayoutsChevronOpen' : ''">
-              <ChevronRightIcon />
+              <chevron-right-icon />
             </td>
           </tr>
         </tbody>
@@ -221,8 +221,13 @@
 </template>
 
 <script>
+import { ChevronRightIcon } from 'vue-tabler-icons'
+
 export default {
   name: 'KeyboardSlot',
+  components: {
+    ChevronRightIcon
+  },
   props: {
     keeb: Object
   },

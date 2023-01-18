@@ -9,7 +9,9 @@
         <span class="cursor-pointer" title="Click to copy" @click="clickToCopy()">
           {{ copyText }}&nbsp;
           <span class="text-muted">{{ clickTip }}</span>
-          <span v-if="!clickTip" style="height: 23px; margin-top: -5px; position: absolute">X</span>
+          <span v-if="!clickTip" style="height: 23px; margin-top: -5px; position: absolute">
+            <clipboard-check-icon />
+          </span>
         </span>
       </template>
     </ModalComponent>
@@ -60,12 +62,14 @@
 </template>
 
 <script>
+import { ClipboardCheckIcon } from 'vue-tabler-icons'
 import ModalComponent from '@/components/ModalComponent'
 
 export default {
   name: 'FooterComponent',
   components: {
-    ModalComponent
+    ModalComponent,
+    ClipboardCheckIcon
   },
   data () {
     return {

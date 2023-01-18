@@ -1,5 +1,4 @@
 .keeb-specs-card table tbody {
-  /*border-bottom: grey solid 1px;*/
   line-height: 2;
 }
 
@@ -68,7 +67,7 @@
   width: 475px;
   display: flex;
   height: fit-content;
-  margin-top: 3.5rem;
+  margin-top: 3rem;
 }
 
 @media only screen and (max-width: 1024px) {

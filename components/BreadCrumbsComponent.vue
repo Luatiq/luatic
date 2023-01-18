@@ -2,7 +2,7 @@
   <nav>
     <ol v-if="Object.keys(breadCrumbs).length > 1" class="flex breadcrumbs">
       <li v-for="(crumb) in breadCrumbs" :key="crumb.key">
-        <RouterLink :to="crumb.path">{{ crumb.display[0].toUpperCase() + crumb.display.substring(1) }}</RouterLink>
+        <RouterLink :to="crumb.path">{{ crumb.display.substring(0,1).toUpperCase() + crumb.display.substring(1) }}</RouterLink>
       </li>
     </ol>
   </nav>
@@ -21,18 +21,20 @@ export default {
         key: 'home'
       }
 
-      let matchedRoutes = this.$route.matched
+      // Filesystem routing has its issues :( route has no parent so this is extremely messy
+      let prevPath = ''
+      for (let i = 0; i < this.$route.matched[0].path.split('/').length; i++) {
+        const RouteString = this.$route.matched[0].path.split('/')[i]
 
-      for (let i = 0; i < matchedRoutes.length; i++) {
-        let key = matchedRoutes[i].path.substring(1).replace(/[^a-z0-9]/, 'gi', '-')
-
-        if (key.length) {
-          breadcrumbContent[key] = {
-            display: matchedRoutes[i].path.substring(matchedRoutes[i].path.lastIndexOf('/') + 1),
-            path: matchedRoutes[i].path,
-            key
+        if (RouteString) {
+          breadcrumbContent[RouteString] = {
+            display: RouteString,
+            path: `${prevPath ? '/' + prevPath : ''}/${RouteString}`,
+            key: RouteString + i
           }
         }
+
+        prevPath = prevPath ? `${prevPath}/${RouteString}` : RouteString
       }
 
       return breadcrumbContent
