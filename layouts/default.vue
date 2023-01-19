@@ -1,9 +1,11 @@
 <template>
-  <div style="display: flex; height: 100vh; flex-direction: column">
-    <HeaderComponent />
-    <Nuxt style="flex: 1" />
-    <FooterComponent />
-  </div>
+  <transition name="page">
+    <div style="display: flex; height: 100vh; flex-direction: column">
+      <HeaderComponent />
+      <Nuxt style="flex: 1" />
+      <FooterComponent />
+    </div>
+  </transition>
 </template>
 
 <script>

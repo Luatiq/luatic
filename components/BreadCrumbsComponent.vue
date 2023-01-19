@@ -1,10 +1,12 @@
 <template>
   <nav>
-    <ol v-if="Object.keys(breadCrumbs).length > 1" class="flex breadcrumbs">
-      <li v-for="(crumb) in breadCrumbs" :key="crumb.key">
-        <RouterLink :to="crumb.path">{{ crumb.display.substring(0,1).toUpperCase() + crumb.display.substring(1) }}</RouterLink>
-      </li>
-    </ol>
+    <transition name="breadcrumbs">
+      <ol v-if="Object.keys(breadCrumbs).length > 1" class="flex breadcrumbs">
+        <li v-for="(crumb) in breadCrumbs" :key="crumb.key">
+          <RouterLink :to="crumb.path">{{ crumb.display.substring(0,1).toUpperCase() + crumb.display.substring(1) }}</RouterLink>
+        </li>
+      </ol>
+    </transition>
   </nav>
 </template>
 
@@ -47,6 +49,11 @@ export default {
 .breadcrumbs {
   list-style: none;
   padding: 0;
+  margin-top: 0;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
 }
 
 .breadcrumbs li {

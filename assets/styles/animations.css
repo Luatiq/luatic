@@ -1,0 +1,27 @@
+.page-enter-active, .page-leave-active {
+  /*transition: opacity .08s ease-in-out;*/
+  transition: opacity .15s ease-in;
+}
+
+.page-enter-from, .page-leave-to {
+  opacity: 0;
+}
+
+.breadcrumbs-enter-active, .breadcrumbs-leave-active {
+  transition: margin .05s;
+}
+
+.breadcrumbs-enter-from, .breadcrumbs-leave-to {
+  margin: 0;
+}
+
+.modal-enter-active, .modal-leave-active {
+  transition: opacity .15s ease-in-out;
+}
+
+.modal-enter-from, .modal-leave-to {
+  opacity: 0;
+}
+
+/* Fast animations here */
+/*@media screen and (prefers-reduced-motion: no-preference) { }*/

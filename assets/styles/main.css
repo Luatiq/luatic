@@ -241,22 +241,6 @@ footer p {
   margin-bottom: 20px;
 }
 
-.modal-enter-active, .modal-leave-active {
-  transition: opacity .08s ease-in-out;
-}
-
-.modal-enter-from, .modal-leave-to {
-  opacity: 0;
-}
-
-.modal-enter-active, .modal-leave-active {
-  transition: opacity .08s ease-in-out;
-}
-
-.modal-enter-from, .modal-leave-to {
-  opacity: 0;
-}
-
 .card-wrapper {
   display: flex;
   flex-direction: row;

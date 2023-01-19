@@ -1,7 +1,5 @@
 <template>
   <div class="container">
-    <h1>Luatic</h1><span style="padding-left: 1rem;" class="subtext">&lsqb;loo‐ah‐tik&rsqb;</span>
-
     <section>
       <h2>Pages</h2>
       <div class="card">
