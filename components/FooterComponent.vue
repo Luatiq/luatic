@@ -43,9 +43,9 @@
                 </a>
               </li>
               <li>
-                <a href="#" title="Discord" @click="isDiscordModalVisible = true">
+                <button type="button" class="footer-button" title="Discord" @click="isDiscordModalVisible = true">
                   <img src="../assets/images/discord-mark-white.svg" alt="Discord">
-                </a>
+                </button>
               </li>
             </ul>
           </div>

@@ -6,12 +6,14 @@
           <h1 class="inline-block modal-title">
             {{ title }}
           </h1>
-          <a
-            href="#"
+          <button
+            type="button"
             title="Close"
             class="modal-close"
             @click="$emit('toggleModal')"
-          ><x-icon /></a>
+          >
+            <x-icon />
+          </button>
         </div>
 
         <div class="modal-content">

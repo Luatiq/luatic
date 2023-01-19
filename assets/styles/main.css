@@ -152,11 +152,11 @@ footer ul {
   -webkit-user-select: none;
 }
 
-footer ul li {
+footer ul li, .footer-button {
   display: inline-block;
 }
 
-footer ul a img {
+footer ul a img, .footer-button img {
   height: 30pt;
   width: 30pt;
   padding: 5pt;
@@ -164,8 +164,13 @@ footer ul a img {
   transition: .2s;
 }
 
-footer ul a img:hover {
-  background-color: var(--bgTertiary);
+.footer-button, .footer-button:hover {
+  padding: 0;
+  background-color: rgba(0,0,0,0);
+}
+
+footer ul a img:hover, .footer-button img:hover {
+  background-color: var(--surface1);
 }
 
 footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
@@ -205,7 +210,7 @@ footer p {
 .modal {
   position: relative !important;
   background-color: var(--bgColor);
-  padding: 12pt 20pt;
+  padding: 1rem .8rem;
   border-radius: .75rem;
   z-index: 1001;
   min-width: 350px;
@@ -220,11 +225,16 @@ footer p {
 
 .modal-close {
   position: absolute;
-  right: 20pt;
+  top: 1rem;
+  right: .8rem;
+  height: 30px;
+  width: 30px;
+  background-color: rgba(0,0,0,0);
 }
 
 .modal-close svg {
-  height: 20pt;
+  width: 20pt;
+  transform: translate(-10px, -5px);
 }
 
 .modal-header {
