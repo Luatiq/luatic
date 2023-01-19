@@ -15,6 +15,9 @@ export default {
   components: {
     HeaderComponent,
     FooterComponent
+  },
+  head: {
+    title: 'Luatic'
   }
 }
 </script>
