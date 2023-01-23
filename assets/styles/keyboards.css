@@ -70,17 +70,13 @@
   margin-top: 3rem;
 }
 
-@media only screen and (max-width: 1024px) {
-  .keeb-main main {
-    max-width: calc(100% - 400px - 1rem);
-  }
-
-  .keeb-specs-card {
-    width: 400px;
-  }
-}
-
+/* Medium screen sizes and down */
 @media only screen and (max-width: 768px) {
+  .keeb-main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .keeb-main main {
     max-width: 100%;
   }
@@ -88,6 +84,17 @@
   .keeb-specs-card {
     width: 100%;
     margin-top: 1rem;
+  }
+}
+
+/* Large screen sizes */
+@media only screen and (max-width: 992px) {
+  .keeb-main main {
+    max-width: calc(100% - 325px - 1rem);
+  }
+
+  .keeb-specs-card {
+    width: 325px;
   }
 }
 

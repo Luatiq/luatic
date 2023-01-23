@@ -76,6 +76,7 @@ a:active {
 @media only screen and (max-width: 576px) {
   .card-half {
     flex-basis: 100% !important;
+    /*flex-shrink: 0;*/
   }
 }
 
@@ -244,7 +245,9 @@ footer p {
 .card-wrapper {
   display: flex;
   flex-direction: row;
-  gap: .75rem;
+  flex-wrap: wrap;
+  gap: .5rem;
+  justify-content: space-between;
 }
 
 .card {
@@ -276,7 +279,7 @@ footer p {
 }
 
 .card-half {
-  flex-basis: 50%;
+  flex-basis: calc(50% - .25rem);
 }
 
 button {
