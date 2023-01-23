@@ -9442,7 +9442,7 @@ __metadata:
     vue: ^2.7.10
     vue-jest: ^3.0.4
     vue-server-renderer: ^2.7.10
-    vue-tabler-icons: ^2.18
+    vue-tabler-icons: ^1.0
     vue-template-compiler: ^2.7.10
   languageName: unknown
   linkType: soft
@@ -14246,10 +14246,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-tabler-icons@npm:^2.18":
-  version: 2.18.0
-  resolution: "vue-tabler-icons@npm:2.18.0"
-  checksum: 6f9a06313677b010f59d0ca658ae47b1bc1ac1527013da836f618d7456dbefa9141422d68b8ea7befbbcbf37407011c21155d61e3b89e41b5a020dd403ec8a32
+"vue-tabler-icons@npm:^1.0":
+  version: 1.14.0
+  resolution: "vue-tabler-icons@npm:1.14.0"
+  checksum: 6f78bde702313f79503596f1d29d3dc452260aaa940f9533a849670d6a63bc963f5ce51bb54d17b88188adfd6067924ca5df856225799395c643f8c54a09d6d9
   languageName: node
   linkType: hard
 
