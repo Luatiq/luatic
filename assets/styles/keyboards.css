@@ -88,7 +88,7 @@
 }
 
 /* Large screen sizes */
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 768px) and (max-width: 992px) {
   .keeb-main main {
     max-width: calc(100% - 325px - 1rem);
   }
