@@ -74,7 +74,7 @@ export default {
   data () {
     return {
       keeb: 'Ciel60',
-      copyText: 'Luatic#0409',
+      copyText: 'Lua#6969',
       clickTip: '(click to copy)',
       isDiscordModalVisible: false
     }
