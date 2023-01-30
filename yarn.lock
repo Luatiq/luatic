@@ -3154,12 +3154,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/test-utils@npm:^2.2.7":
-  version: 2.2.7
-  resolution: "@vue/test-utils@npm:2.2.7"
+"@vue/test-utils@npm:^2.2.8":
+  version: 2.2.8
+  resolution: "@vue/test-utils@npm:2.2.8"
+  dependencies:
+    js-beautify: 1.14.6
   peerDependencies:
+    "@vue/compiler-dom": ^3.0.1
     vue: ^3.0.1
-  checksum: b6a0daadcca58fd94b14e5dd66e1d8dbf23557ff698eaa3dac97c068d81301239ab347d303c96b619ce60f21eb597400e1ee8363765b0944bdc34ee3d73b155a
+  checksum: 7b014872ef44ec0d7c3b6236b5daf8cd3c813d94c4a196b6bff865b456438786cd1b1da2265a1c53d626600a9d2388d2f17e2c143305f6d94d8816c2f8ceb253
   languageName: node
   linkType: hard
 
@@ -9131,6 +9134,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"js-beautify@npm:1.14.6":
+  version: 1.14.6
+  resolution: "js-beautify@npm:1.14.6"
+  dependencies:
+    config-chain: ^1.1.13
+    editorconfig: ^0.15.3
+    glob: ^8.0.3
+    nopt: ^6.0.0
+  bin:
+    css-beautify: js/bin/css-beautify.js
+    html-beautify: js/bin/html-beautify.js
+    js-beautify: js/bin/js-beautify.js
+  checksum: 2e61c1183c73d7464ec7d5354763ee9e17ecb4b5c7a3744e9a9dc2e9c406fc6e0c37399130d1ee48313ff502e03e8a949dce96acdaee309dc44317249565934d
+  languageName: node
+  linkType: hard
+
 "js-beautify@npm:^1.6.14":
   version: 1.14.7
   resolution: "js-beautify@npm:1.14.7"
@@ -9643,7 +9662,7 @@ __metadata:
     "@nuxt/types": ~2.15.0
     "@nuxtjs/eslint-config": ^11.0.0
     "@nuxtjs/eslint-module": ^3.1.0
-    "@vue/test-utils": ^2.2.7
+    "@vue/test-utils": ^2.2.8
     babel-core: 7.0.0-bridge.0
     babel-jest: ^29.4.0
     core-js: ^3.25.3
