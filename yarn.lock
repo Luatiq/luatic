@@ -363,6 +363,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/parser@npm:^7.16.4":
+  version: 7.20.13
+  resolution: "@babel/parser@npm:7.20.13"
+  bin:
+    parser: ./bin/babel-parser.js
+  checksum: 7eb2e3d9d9ad5e24b087c88d137f5701d94f049e28b9dce9f3f5c6d4d9b06a0d7c43b9106f1c02df8a204226200e0517de4bc81a339768a4ebd4c59107ea93a4
+  languageName: node
+  linkType: hard
+
 "@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression@npm:^7.18.6":
   version: 7.18.6
   resolution: "@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression@npm:7.18.6"
@@ -3123,6 +3132,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vue/compiler-core@npm:3.2.45":
+  version: 3.2.45
+  resolution: "@vue/compiler-core@npm:3.2.45"
+  dependencies:
+    "@babel/parser": ^7.16.4
+    "@vue/shared": 3.2.45
+    estree-walker: ^2.0.2
+    source-map: ^0.6.1
+  checksum: e3c687b24c16c2b320c02ed38960f8bee7dcb88bddb09e60a80d2d4dc004070cbbd4eccbc99cc168d48d753ff60d0b9eefba835e1dec3b7f233a98c89af31c07
+  languageName: node
+  linkType: hard
+
+"@vue/compiler-dom@npm:^3.0.1":
+  version: 3.2.45
+  resolution: "@vue/compiler-dom@npm:3.2.45"
+  dependencies:
+    "@vue/compiler-core": 3.2.45
+    "@vue/shared": 3.2.45
+  checksum: 89115538635f0da9cce615de5488d2759256fa573976a09a049536dbb94e9b5086b46f2f11e743cf0a7b14837161b3191c67611e0493054a5d4c4b96a322c901
+  languageName: node
+  linkType: hard
+
 "@vue/compiler-sfc@npm:2.7.14":
   version: 2.7.14
   resolution: "@vue/compiler-sfc@npm:2.7.14"
@@ -3154,12 +3185,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/test-utils@npm:^2.2.7":
-  version: 2.2.7
-  resolution: "@vue/test-utils@npm:2.2.7"
+"@vue/shared@npm:3.2.45":
+  version: 3.2.45
+  resolution: "@vue/shared@npm:3.2.45"
+  checksum: ff3205056caed2a965aa0980e21319515ce13c859a9b269fdab0ee8b3c9f3d8eec7eefdb7fd6c6b47c12acdc7bf23c6c187b6191054221b4a29108139b20c221
+  languageName: node
+  linkType: hard
+
+"@vue/test-utils@npm:^2.2.9":
+  version: 2.2.9
+  resolution: "@vue/test-utils@npm:2.2.9"
+  dependencies:
+    "@vue/compiler-dom": ^3.0.1
+    js-beautify: 1.14.6
   peerDependencies:
+    "@vue/compiler-dom": ^3.0.1
     vue: ^3.0.1
-  checksum: b6a0daadcca58fd94b14e5dd66e1d8dbf23557ff698eaa3dac97c068d81301239ab347d303c96b619ce60f21eb597400e1ee8363765b0944bdc34ee3d73b155a
+  dependenciesMeta:
+    "@vue/compiler-dom":
+      optional: true
+  checksum: 8b9cb23c4c7d86945757e2be04261be5de5eb66a2613e9192cec4bc65a81ec16195b1392a942d43bc4773d4945b49db9f8f141ec8a66d6e8549b2c70949c5ae9
   languageName: node
   linkType: hard
 
@@ -6634,6 +6679,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"estree-walker@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "estree-walker@npm:2.0.2"
+  checksum: 6151e6f9828abe2259e57f5fd3761335bb0d2ebd76dc1a01048ccee22fabcfef3c0859300f6d83ff0d1927849368775ec5a6d265dde2f6de5a1be1721cd94efc
+  languageName: node
+  linkType: hard
+
 "esutils@npm:^2.0.2":
   version: 2.0.3
   resolution: "esutils@npm:2.0.3"
@@ -9131,6 +9183,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"js-beautify@npm:1.14.6":
+  version: 1.14.6
+  resolution: "js-beautify@npm:1.14.6"
+  dependencies:
+    config-chain: ^1.1.13
+    editorconfig: ^0.15.3
+    glob: ^8.0.3
+    nopt: ^6.0.0
+  bin:
+    css-beautify: js/bin/css-beautify.js
+    html-beautify: js/bin/html-beautify.js
+    js-beautify: js/bin/js-beautify.js
+  checksum: 2e61c1183c73d7464ec7d5354763ee9e17ecb4b5c7a3744e9a9dc2e9c406fc6e0c37399130d1ee48313ff502e03e8a949dce96acdaee309dc44317249565934d
+  languageName: node
+  linkType: hard
+
 "js-beautify@npm:^1.6.14":
   version: 1.14.7
   resolution: "js-beautify@npm:1.14.7"
@@ -9643,7 +9711,7 @@ __metadata:
     "@nuxt/types": ~2.15.0
     "@nuxtjs/eslint-config": ^11.0.0
     "@nuxtjs/eslint-module": ^3.1.0
-    "@vue/test-utils": ^2.2.7
+    "@vue/test-utils": ^2.2.9
     babel-core: 7.0.0-bridge.0
     babel-jest: ^29.4.0
     core-js: ^3.25.3
