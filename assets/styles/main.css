@@ -2,6 +2,7 @@
 @import "@fontsource/roboto"; /* Weights: [100,300,400,500,700,900] */
 
 /* https://github.com/catppuccin/catppuccin/blob/main/docs/style-guide.md */
+/*noinspection CssUnresolvedCustomProperty*/
 .theme-dark {
   /* Background colors */
   --bgColor: var(--ctp-mocha-base-hsl);
@@ -194,7 +195,7 @@ footer p {
 }
 
 .modal-backdrop {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
