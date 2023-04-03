@@ -1371,10 +1371,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@catppuccin/palette@npm:^0.1.6":
-  version: 0.1.6
-  resolution: "@catppuccin/palette@npm:0.1.6"
-  checksum: d0bcebf0cd422598483d430c8eaf55b363ae98a7ba515d9e2a869510893036c199cd3a16e46bbf66c0e7c60e0142d604e0f459bc06a32a62fd6e1dd9dbfc9a17
+"@catppuccin/palette@npm:^0.1.8":
+  version: 0.1.8
+  resolution: "@catppuccin/palette@npm:0.1.8"
+  checksum: ed13a92c1eb2ed2a2aa77e185c475a0197b1579c7e99f169fd8d26876942b2da352252b767fd6ca942fe93112b48f49a69fe70c7e83596f6ee89b35a4a46c1c0
   languageName: node
   linkType: hard
 
@@ -9686,7 +9686,7 @@ __metadata:
   resolution: "luatic@workspace:."
   dependencies:
     "@babel/eslint-parser": ^7.19.1
-    "@catppuccin/palette": ^0.1.6
+    "@catppuccin/palette": ^0.1.8
     "@fontsource/roboto": ^4.5.8
     "@nuxt/types": ~2.16.0
     "@nuxtjs/eslint-config": ^11.0.0
