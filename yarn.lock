@@ -54,9 +54,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/eslint-parser@npm:^7.19.1":
-  version: 7.21.3
-  resolution: "@babel/eslint-parser@npm:7.21.3"
+"@babel/eslint-parser@npm:^7.22.5":
+  version: 7.22.5
+  resolution: "@babel/eslint-parser@npm:7.22.5"
   dependencies:
     "@nicolo-ribaudo/eslint-scope-5-internals": 5.1.1-v1
     eslint-visitor-keys: ^2.1.0
@@ -64,7 +64,7 @@ __metadata:
   peerDependencies:
     "@babel/core": ">=7.11.0"
     eslint: ^7.5.0 || ^8.0.0
-  checksum: cc44a26a518c62ca93cdbee4ec4fa195c5a69b4f85d696c9df572b1ada99446ebdf3caef58a124f401a798279a765f858c88292bc7a8fc0485c34e178b1a9e82
+  checksum: d259a5c6bb11d2b99316a1aafb85be56fd290e2b7076b386a026cd0f8db4b27c0bf0c733bfa2006bb88d38abef323fc2c1352a3521e6e9865f8b205fef6ac845
   languageName: node
   linkType: hard
 
@@ -7827,7 +7827,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "luatic@workspace:."
   dependencies:
-    "@babel/eslint-parser": ^7.19.1
+    "@babel/eslint-parser": ^7.22.5
     "@catppuccin/palette": ^0.1.6
     "@fontsource/roboto": ^4.5.8
     "@nuxt/types": ~2.16.0
