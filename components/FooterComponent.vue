@@ -22,7 +22,7 @@
           <div class="footer-content-block">
             <h6>Contact me</h6>
             <br>
-            <a href="mailto:luavanloon@gmail.com">luavanloon@gmail.com</a>
+            <a href="mailto:lua@luati.cc">lua@luati.cc</a>
           </div>
           <div class="footer-content-block">
             <a href="https://github.com/luatiq/luatic/" target="_blank">Source code</a>
@@ -74,7 +74,7 @@ export default {
   data () {
     return {
       keeb: 'Ciel60',
-      copyText: 'Lua#6969',
+      copyText: 'luatiq',
       clickTip: '(click to copy)',
       isDiscordModalVisible: false
     }
