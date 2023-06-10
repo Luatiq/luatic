@@ -228,7 +228,6 @@ footer p {
 .modal-close {
   position: absolute;
   top: .6rem;
-  right: .6rem;
   height: 30px;
   width: 30px;
   background-color: rgba(0,0,0,0);
