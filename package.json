@@ -30,7 +30,7 @@
     "@nuxtjs/eslint-config": "^11.0.0",
     "@nuxtjs/eslint-module": "^3.1.0",
     "babel-core": "7.0.0-bridge.0",
-    "eslint": "^8.34.0",
+    "eslint": "^8.44.0",
     "eslint-plugin-jest": "^27.0.4",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-vue": "^9.5.1"
