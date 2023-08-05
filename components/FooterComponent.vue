@@ -20,6 +20,11 @@
       <div class="footer-parent container">
         <div>
           <div class="footer-content-block">
+            <nuxt-link to="hire-me">
+              <p class="link">Hire me</p>
+            </nuxt-link>
+          </div>
+          <div class="footer-content-block">
             <h6>Contact me</h6>
             <br>
             <a href="mailto:lua@luati.cc">lua@luati.cc</a>

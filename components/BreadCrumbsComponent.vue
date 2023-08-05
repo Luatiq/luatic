@@ -30,7 +30,7 @@ export default {
 
         if (RouteString) {
           breadcrumbContent[RouteString] = {
-            display: RouteString,
+            display: RouteString.replace('-', ' '),
             path: `${prevPath ? '/' + prevPath : ''}/${RouteString}`,
             key: RouteString + i
           }
