@@ -1,16 +1,48 @@
 <template>
   <main class="container">
-    <h1 class="top-heading">Want to work together?</h1>
+    <h1 class="top-heading">
+      Want to work together?
+    </h1>
     <p>Dat kan! Op dit moment doe ik geen freelance werk, maar ik ben wel opzoek naar een nieuwe werkgever.</p>
+
+    <section>
+      <h2>Experience</h2>
+
+      <button type="button" title="Wat heb je gedaan?" class="subbutton" @click="experienceQuestion = !experienceQuestion">
+        Wat heb je gedaan?
+      </button>
+
+      <section v-if="experienceQuestion" class="card">
+        <p>
+          Als je wil weten wat mijn werkzaamheden zijn (geweest) bij deze bedrijven, mail me voor mijn volledige CV!
+        </p>
+      </section>
+      <br>
+
+      <section class="card card-timeline">
+        <div class="timeline">
+          <div v-for="item in experience" :key="item.display" class="timeline-container">
+            <div class="timeline-content">
+              <div class="card">
+                <h2>{{ item.display }}</h2>
+                <span class="card-badge timeline-badge">{{ item.timespan }}</span>
+
+                <p>{{ item.title }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
 
     <section>
       <h2>My work</h2>
 
-      <button type="button" title="Waarom zo weinig?" class="subbutton" @click="whysolittle = !whysolittle">
+      <button type="button" title="Waarom zo weinig?" class="subbutton" @click="casesQuestion = !casesQuestion">
         Is dat alles?
       </button>
 
-      <section v-if="whysolittle" class="card">
+      <section v-if="casesQuestion" class="card">
         <p>
           Dit zijn alleen mijn eigen projecten.
           <br>
@@ -51,6 +83,20 @@ export default {
   name: 'hire-me',
   data () {
     return {
+      casesQuestion: false,
+      experience: [
+        {
+          display: 'd-Media B.V.',
+          title: 'Software developer',
+          timespan: 'Januari 2023 - Present'
+        },
+        {
+          display: 'Wabber B.V.',
+          title: 'Software developer',
+          timespan: 'Juni 2020 - Juli 2022'
+        }
+      ],
+      experienceQuestion: false,
       cases: [
         {
           display: 'I hope I',
@@ -70,8 +116,7 @@ export default {
           link: 'https://larosbeauty.nl',
           wip: false
         }
-      ],
-      whysolittle: false
+      ]
     }
   },
   methods: {
@@ -81,5 +126,5 @@ export default {
 </script>
 
 <style scoped>
-
+@import '@/assets/styles/hire-me.css';
 </style>
