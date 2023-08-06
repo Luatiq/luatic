@@ -54,6 +54,10 @@
   margin: 0;
 }
 
+.card-badge svg {
+  vertical-align: bottom;
+}
+
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 576px) {
   .timeline-badge {
@@ -67,6 +71,13 @@
 
 .case-title {
   padding-bottom: 1rem;
+}
+
+.case-title svg {
+  vertical-align: bottom;
+  padding: .15rem;
+  background-color: var(--surface1);
+  border-radius: .2rem;
 }
 
 h1 {
@@ -85,4 +96,64 @@ section p {
 main p {
   margin-top: .5rem;
   margin-bottom: 0;
+}
+
+main section p {
+  margin-top: 0;
+}
+
+.badge-wip {
+  color: var(--textWarning);
+}
+
+.badge-help {
+  cursor: help;
+}
+
+.skill-list ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.skill-list ul li:first-child {
+  margin-top: 0;
+}
+
+.skill-list ul li:last-child {
+  margin-bottom: 0;
+}
+
+.skill-card {
+  background-color: var(--bgSecondary);
+  border-radius: .2rem;
+  margin: .5rem auto;
+  width: 100%;
+}
+
+.skill-icon {
+  display: inline-block;
+  padding: .5rem;
+  vertical-align: middle;
+  background-color: var(--surface1);
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: .5rem;
+  border-radius: .2rem;
+}
+
+.skill-icon svg {
+  vertical-align: middle;
+}
+
+.skill-list h3 {
+  margin-bottom: 0;
+  margin-top: .5rem;
+}
+
+.skill-card-icon {
+  float: right;
+  margin-top: .5rem;
+  margin-right: .5rem;
+  height: 1.25rem;
 }

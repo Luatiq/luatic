@@ -328,3 +328,15 @@ button:disabled:hover {
 .text-highlight {
   color: var(--textHighlight);
 }
+
+.text-good {
+  color: var(--textSuccess);
+}
+
+.text-bleh {
+  color: var(--textWarning);
+}
+
+.text-bad {
+  color: var(--textError);
+}

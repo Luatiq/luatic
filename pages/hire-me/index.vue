@@ -36,6 +36,84 @@
     </section>
 
     <section>
+      <h2>Skill set</h2>
+      <section class="card-wrapper">
+        <section class="card card-half skill-list">
+          <ul>
+            <li v-for="item in skillset.highlighted" :key="item.display" class="skill-card">
+              <span class="skill-icon">
+                <component :is="`Brand${item.display}Icon`" />
+              </span>
+
+              {{ item.display }}
+
+              <span :title="`Sinds ${item.since}`">
+                <calendar-icon class="subtext skill-card-icon" />
+              </span>
+
+              <span v-if="item.enjoyment !== undefined" :title="getIconForSkillEnjoyment(item.enjoyment).title">
+                <component
+                  :is="`mood-${getIconForSkillEnjoyment(item.enjoyment).iconName}-icon`"
+                  :class="getIconForSkillEnjoyment(item.enjoyment).className"
+                  class="subtext skill-card-icon"
+                />
+              </span>
+            </li>
+          </ul>
+
+          <h3>Good to know?</h3>
+          <ul>
+            <li v-for="item in skillset.extra" :key="item.display" class="skill-card">
+              <span class="skill-icon">
+                <component :is="`Brand${item.icon !== undefined ? item.icon : item.display}Icon`" />
+              </span>
+
+              {{ item.display }}
+
+              <span :title="`Sinds ${item.since}`">
+                <calendar-icon class="subtext skill-card-icon" />
+              </span>
+
+              <span v-if="item.enjoyment !== undefined" :title="getIconForSkillEnjoyment(item.enjoyment).title">
+                <component
+                  :is="`mood-${getIconForSkillEnjoyment(item.enjoyment).iconName}-icon`"
+                  :class="getIconForSkillEnjoyment(item.enjoyment).className"
+                  class="subtext skill-card-icon"
+                />
+              </span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="card card-half skill-list">
+          <h3>Duh, natuurlijk kan & ken ik</h3>
+          <ul>
+            <li v-for="item in skillset.obvious" :key="item.display" class="skill-card">
+              <!-- @TODO load Jquery icon via svg -->
+              <span class="skill-icon">
+                <component :is="`Brand${item.icon !== undefined ? item.icon : item.display}Icon`" />
+              </span>
+
+              {{ item.display }}
+
+              <span :title="`Sinds ${item.since}`">
+                <calendar-icon class="subtext skill-card-icon" />
+              </span>
+
+              <span v-if="item.enjoyment !== undefined" :title="getIconForSkillEnjoyment(item.enjoyment).title">
+                <component
+                  :is="`mood-${getIconForSkillEnjoyment(item.enjoyment).iconName}-icon`"
+                  :class="getIconForSkillEnjoyment(item.enjoyment).className"
+                  class="subtext skill-card-icon"
+                />
+              </span>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </section>
+
+    <section>
       <h2>My work</h2>
 
       <button type="button" title="Waarom zo weinig?" class="subbutton" @click="casesQuestion = !casesQuestion">
@@ -62,9 +140,16 @@
         <div v-for="item in cases" :key="item.display" class="card card-half">
           <h3 class="case-title text-highlight">
             {{ item.display }}
+            <!-- @TODO upgrade tablericons (so Vue 3) for Symfony icon -->
+            <component :is="`Brand${item.icon}Icon`">
+              <!-- @TODO doesn't work -->
+              <title>{{ item.icon }}</title>
+            </component>
           </h3>
 
-          <span v-if="item.wip" class="card-badge" title="Dit project is nog niet af">Work in progress</span>
+          <span v-if="item.wip" class="card-badge badge-wip badge-help" title="Dit project is nog niet af">
+            <alert-triangle-icon />
+          </span>
 
           <p>{{ item.description }}</p>
 
@@ -79,11 +164,47 @@
 </template>
 
 <script>
+import {
+  CalendarIcon,
+  AlertTriangleIcon,
+  MoodHappyIcon,
+  MoodAnnoyedIcon,
+  MoodAngryIcon,
+  BrandVueIcon,
+  BrandBootstrapIcon,
+  BrandLaravelIcon,
+  BrandDrupalIcon,
+  BrandPhpIcon,
+  BrandHtml5Icon,
+  BrandCss3Icon,
+  BrandJavascriptIcon,
+  // BrandJqueryIcon,
+  BrandGitIcon
+  // BrandPhotoshopIcon
+} from 'vue-tabler-icons'
+
 export default {
   name: 'hire-me',
+  components: {
+    CalendarIcon,
+    AlertTriangleIcon,
+    MoodHappyIcon,
+    MoodAnnoyedIcon,
+    MoodAngryIcon,
+    BrandVueIcon,
+    BrandBootstrapIcon,
+    BrandLaravelIcon,
+    BrandDrupalIcon,
+    BrandPhpIcon,
+    BrandHtml5Icon,
+    BrandCss3Icon,
+    BrandJavascriptIcon,
+    // BrandJqueryIcon,
+    BrandGitIcon
+    // BrandPhotoshopIcon
+  },
   data () {
     return {
-      casesQuestion: false,
       experience: [
         {
           display: 'd-Media B.V.',
@@ -97,30 +218,118 @@ export default {
         }
       ],
       experienceQuestion: false,
+      skillset: {
+        highlighted: [
+          {
+            display: 'Symfony',
+            enjoyment: 'most',
+            since: 'Januari 2023'
+          },
+          {
+            display: 'Vue',
+            since: 'Maart 2021'
+          },
+          {
+            display: 'Bootstrap',
+            since: '2019'
+          },
+          {
+            display: 'Laravel',
+            since: 'Februari 2023'
+          },
+          {
+            display: 'Drupal',
+            enjoyment: 'least',
+            since: 'Januari 2023'
+          }
+        ],
+        obvious: [
+          {
+            display: 'PHP',
+            icon: 'Php',
+            since: 'December 2019'
+          },
+          {
+            display: 'Git',
+            since: 'Januari 2020'
+          },
+          {
+            display: 'HTML',
+            icon: 'Html5',
+            since: '2018'
+          },
+          {
+            display: 'CSS',
+            icon: 'Css3',
+            since: '2018'
+          },
+          {
+            display: 'JavaScript',
+            icon: 'Javascript',
+            since: '2018'
+          },
+          {
+            display: 'Jquery',
+            enjoyment: 'little',
+            since: 'Januari 2020'
+          }
+        ],
+        extra: [
+          {
+            display: 'Photoshop',
+            since: '2016'
+          }
+        ]
+      },
       cases: [
         {
           display: 'I hope I',
+          icon: 'Symfony',
           description: "Ergens in ons hebben we allemaal wel een bucket-list. Maar waar schrijven we 'm op? Het leek mij leuk om hier iets voor te maken, zodat je je bucket-list kan opschrijven, (hopelijk!) afvinken en delen met anderen, misschien kan je samen je bucketlist afwerken?",
           link: 'https://gitlab.com/luatoss/ihi',
           wip: true
         },
         {
           display: 'Luatic',
+          icon: 'Vue',
           description: 'Deze website is eigenlijk een bijproduct van een eigen domein willen hebben, maar opgezet om mijn toetsenborden te kunnen delen. En nu voor deze pagina! Een website is eigenlijk nooit af, maar buiten al mijn toetsenborden toe te voegen heb ik er op dit moment geen plannen voor.',
           link: false,
           wip: false
         },
         {
           display: 'Laros Beauty',
+          icon: 'Bootstrap',
           description: 'Een simpele website om een klein bedrijf op de kaart te kunnen zetten. Binnenkort kunnen we online!',
           link: 'https://larosbeauty.nl',
           wip: false
         }
-      ]
+      ],
+      casesQuestion: false
     }
   },
   methods: {
-
+    getIconForSkillEnjoyment (enjoymentLevel) {
+      switch (enjoymentLevel) {
+        case 'most':
+          return {
+            title: 'Ik vind dit het leukst om mee te werken',
+            iconName: 'happy',
+            className: 'text-good'
+          }
+        case 'little':
+          return {
+            title: 'Hier werk ik liever niet mee',
+            iconName: 'annoyed',
+            className: 'text-bleh'
+          }
+        case 'least':
+          return {
+            title: 'Dit vind ik helemaal niks, maar ik heb het wel geleerd',
+            iconName: 'angry',
+            className: 'text-bad'
+          }
+      }
+    }
   }
 }
 </script>
