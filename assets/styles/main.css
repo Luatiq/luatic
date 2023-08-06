@@ -324,3 +324,7 @@ button:disabled:hover {
   background: var(--surface1);
   color: var(--textSubtle);
 }
+
+.text-highlight {
+  color: var(--textHighlight);
+}

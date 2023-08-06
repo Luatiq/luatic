@@ -27,7 +27,7 @@
                 <h2>{{ item.display }}</h2>
                 <span class="card-badge timeline-badge">{{ item.timespan }}</span>
 
-                <p>{{ item.title }}</p>
+                <p class="text-highlight">{{ item.title }}</p>
               </div>
             </div>
           </div>
@@ -60,7 +60,7 @@
 
       <section class="card-wrapper">
         <div v-for="item in cases" :key="item.display" class="card card-half">
-          <h3 style="padding-bottom: 1rem">
+          <h3 class="case-title text-highlight">
             {{ item.display }}
           </h3>
 

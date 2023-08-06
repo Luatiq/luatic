@@ -30,7 +30,7 @@
   height: 20px;
   left: -12px;
   background-color: var(--bgColor);
-  border: 4px solid var(--overlay1);
+  border: 4px solid var(--textHighlight);
   top: 50%;
   border-radius: 50%;
   z-index: 1;
@@ -63,4 +63,26 @@
     padding: 0;
     margin-bottom: 1rem;
   }
+}
+
+.case-title {
+  padding-bottom: 1rem;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+section h2 {
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+section p {
+  margin: 0;
+}
+
+main p {
+  margin-top: .5rem;
+  margin-bottom: 0;
 }
