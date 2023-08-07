@@ -1,9 +1,9 @@
 <template>
   <main class="container">
     <h1 class="top-heading">
-      Want to work together?
+      Let's work together!
     </h1>
-    <p>Dat kan! Op dit moment doe ik geen freelance werk, maar ik ben wel opzoek naar een nieuwe werkgever.</p>
+    <p>Op dit moment zoek ik geen freelance werk, maar ik ben wel opzoek naar een nieuwe werkgever.</p>
 
     <section>
       <h2>Experience</h2>
@@ -27,7 +27,9 @@
                 <h2>{{ item.display }}</h2>
                 <span class="card-badge timeline-badge">{{ item.timespan }}</span>
 
-                <p class="text-highlight">{{ item.title }}</p>
+                <p class="text-highlight">
+                  {{ item.title }}
+                </p>
               </div>
             </div>
           </div>
@@ -42,7 +44,9 @@
           <ul>
             <li v-for="item in skillset.highlighted" :key="item.display" class="skill-card">
               <span class="skill-icon">
-                <component :is="`Brand${item.display}Icon`" />
+                <component :is="`Brand${item.icon !== undefined ? item.icon : item.display}Icon`" v-if="item.iconFile === undefined" />
+                <!--suppress HtmlRequiredAltAttribute -->
+                <img v-else :src="getImage(item.iconFile)" class="select-none">
               </span>
 
               {{ item.display }}
@@ -65,7 +69,9 @@
           <ul>
             <li v-for="item in skillset.extra" :key="item.display" class="skill-card">
               <span class="skill-icon">
-                <component :is="`Brand${item.icon !== undefined ? item.icon : item.display}Icon`" />
+                <component :is="`Brand${item.icon !== undefined ? item.icon : item.display}Icon`" v-if="item.iconFile === undefined" />
+                <!--suppress HtmlRequiredAltAttribute -->
+                <img v-else :src="getImage(item.iconFile)" class="select-none">
               </span>
 
               {{ item.display }}
@@ -89,9 +95,10 @@
           <h3>Duh, natuurlijk kan & ken ik</h3>
           <ul>
             <li v-for="item in skillset.obvious" :key="item.display" class="skill-card">
-              <!-- @TODO load Jquery icon via svg -->
               <span class="skill-icon">
-                <component :is="`Brand${item.icon !== undefined ? item.icon : item.display}Icon`" />
+                <component :is="`Brand${item.icon !== undefined ? item.icon : item.display}Icon`" v-if="item.iconFile === undefined" />
+                <!--suppress HtmlRequiredAltAttribute -->
+                <img v-else :src="getImage(item.iconFile)" class="select-none">
               </span>
 
               {{ item.display }}
@@ -141,10 +148,9 @@
           <h3 class="case-title text-highlight">
             {{ item.display }}
             <!-- @TODO upgrade tablericons (so Vue 3) for Symfony icon -->
-            <component :is="`Brand${item.icon}Icon`">
-              <!-- @TODO doesn't work -->
-              <title>{{ item.icon }}</title>
-            </component>
+            <component :is="`Brand${item.icon}Icon`" v-if="item.iconFile === undefined" />
+            <!--suppress HtmlRequiredAltAttribute -->
+            <img v-else :src="getImage(item.iconFile)" class="select-none" style="height: 24px">
           </h3>
 
           <span v-if="item.wip" class="card-badge badge-wip badge-help" title="Dit project is nog niet af">
@@ -223,7 +229,8 @@ export default {
           {
             display: 'Symfony',
             enjoyment: 'most',
-            since: 'Januari 2023'
+            since: 'Januari 2023',
+            iconFile: 'brand-symfony.svg'
           },
           {
             display: 'Vue',
@@ -271,13 +278,15 @@ export default {
           {
             display: 'Jquery',
             enjoyment: 'little',
-            since: 'Januari 2020'
+            since: 'Januari 2020',
+            iconFile: 'brand-jquery.svg'
           }
         ],
         extra: [
           {
             display: 'Photoshop',
-            since: '2016'
+            since: '2016',
+            iconFile: 'brand-photoshop.svg'
           }
         ]
       },
@@ -285,6 +294,7 @@ export default {
         {
           display: 'I hope I',
           icon: 'Symfony',
+          iconFile: 'brand-symfony-case.svg',
           description: "Ergens in ons hebben we allemaal wel een bucket-list. Maar waar schrijven we 'm op? Het leek mij leuk om hier iets voor te maken, zodat je je bucket-list kan opschrijven, (hopelijk!) afvinken en delen met anderen, misschien kan je samen je bucketlist afwerken?",
           link: 'https://gitlab.com/luatoss/ihi',
           wip: true
@@ -312,7 +322,7 @@ export default {
       switch (enjoymentLevel) {
         case 'most':
           return {
-            title: 'Ik vind dit het leukst om mee te werken',
+            title: 'Dit vind ik het leukst om mee te werken',
             iconName: 'happy',
             className: 'text-good'
           }
@@ -329,6 +339,9 @@ export default {
             className: 'text-bad'
           }
       }
+    },
+    getImage (filename) {
+      return require('../../assets/images/' + filename)
     }
   }
 }

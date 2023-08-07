@@ -73,7 +73,7 @@
   padding-bottom: 1rem;
 }
 
-.case-title svg {
+.case-title svg, .case-title img {
   vertical-align: bottom;
   padding: .15rem;
   background-color: var(--surface1);
@@ -156,4 +156,11 @@ main section p {
   margin-top: .5rem;
   margin-right: .5rem;
   height: 1.25rem;
+}
+
+.select-none {
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
 }
