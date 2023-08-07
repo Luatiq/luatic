@@ -2129,10 +2129,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/roboto@npm:^4.5.8":
-  version: 4.5.8
-  resolution: "@fontsource/roboto@npm:4.5.8"
-  checksum: 460b6de2c9f7a172192c3f5bdd3aa11f78f0b6660dca9dc2b9d8207272b50c55b5a8f2da68e11e7fbaf44c7d3cf4191030eecce9def79fab75d4cc1de39754e2
+"@fontsource/roboto@npm:^5.0.8":
+  version: 5.0.8
+  resolution: "@fontsource/roboto@npm:5.0.8"
+  checksum: 8aa9c1557ea9489db0eb47f849094e53b644e9d7f60008c7d514481d00ff132726da67f350b63c76943ace6a49ac4de5983b9f92acb05c55b622b4ab4a2a19c6
   languageName: node
   linkType: hard
 
@@ -8411,7 +8411,7 @@ __metadata:
   dependencies:
     "@babel/eslint-parser": ^7.22.9
     "@catppuccin/palette": ^0.1.8
-    "@fontsource/roboto": ^4.5.8
+    "@fontsource/roboto": ^5.0.8
     "@nuxt/types": ~2.16.3
     "@nuxtjs/eslint-config": ^11.0.0
     "@nuxtjs/eslint-module": ^3.1.0
