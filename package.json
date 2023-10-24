@@ -19,10 +19,10 @@
     "@fontsource/roboto": "^4.5.8",
     "core-js": "^3.32.0",
     "nuxt": "^2.17.1",
-    "vue": "^2.7.14",
+    "vue": "^2.7.15",
     "vue-server-renderer": "^2.7.14",
     "vue-tabler-icons": "^1.14.0",
-    "vue-template-compiler": "^2.7.14"
+    "vue-template-compiler": "^2.7.15"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.22.9",
