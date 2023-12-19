@@ -229,7 +229,7 @@ export default {
           {
             display: 'Symfony',
             enjoyment: 'most',
-            since: 'Januari 2023',
+            since: 'Januari 2020',
             iconFile: 'brand-symfony.svg'
           },
           {
