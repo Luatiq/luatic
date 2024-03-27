@@ -213,9 +213,9 @@ export default {
     return {
       experience: [
         {
-          display: 'd-Media B.V.',
+          display: 'd-Media web professionals',
           title: 'Software developer',
-          timespan: 'Januari 2023 - Present'
+          timespan: 'Januari 2023 - Februari 2024'
         },
         {
           display: 'Wabber B.V.',
@@ -334,7 +334,7 @@ export default {
           }
         case 'least':
           return {
-            title: 'Dit vind ik helemaal niks, maar ik heb het wel geleerd',
+            title: 'Hier blijf ik liever van weg',
             iconName: 'angry',
             className: 'text-bad'
           }
